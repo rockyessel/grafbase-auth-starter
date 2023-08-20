@@ -59,8 +59,13 @@ const Account = () => {
         <div className='flex items-center justify-center'>
           <div className='min-w-fit flex-col border bg-white px-6 py-14 shadow-md rounded-[4px] '>
             <div className='mb-8 flex flex-col items-center justify-center'>
-              <Image src='/bloggkie.svg' width={50} height={50} alt='Logo' />
-              <p className='font-rathetta'>BloggKie</p>
+              <Image
+                src='/grafbase.svg'
+                width={50}
+                height={50}
+                alt='Grafbase'
+              />
+              <p className='font-rathetta'>Grafbase</p>
             </div>
             <form onSubmit={handleSubmission}>
               <fieldset className='flex flex-col text-sm rounded-md'>
