@@ -52,14 +52,25 @@ const User = () => {
             <span className='sr-only'>Open user menu</span>
 
             {/* Display user image */}
-            <Image
-              src={user?.image}
-              width={50}
-              height={50}
-              className='w-full h-full object-cover object-center  rounded-full'
-              alt={user?.name}
-              priority
-            />
+            {user.image ? (
+              <Image
+                src={user.image}
+                width={50}
+                height={50}
+                className='w-full h-full object-cover object-center  rounded-full'
+                alt={user.name}
+                priority
+              />
+            ) : (
+              <Image
+                src={'/248387.jpg'}
+                width={50}
+                height={50}
+                className='w-12 h-12 object-cover object-center rounded-full'
+                alt={'248387'}
+                priority
+              />
+            )}
           </button>
           {/* Show user dropdown if enabled */}
           {showUserDropdown && (
