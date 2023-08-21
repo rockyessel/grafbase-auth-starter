@@ -9,9 +9,7 @@ export const authenticatedQuery = async (query: DocumentNode | string, variables
     'Content-Type': 'application/json',
     'x-api-key': process.env.GRAFBASE_API_KEY!,
   };
-  const client = new GraphQLClient('http://127.0.0.1:4000/graphql', {
-    headers,
-  });
+  const client = new GraphQLClient(`${process.env.NEXT_PUBLIC_GRAFBASE_API_URL!}`,{ headers });
   const data = await client.request(query, variables);
   return data;
 };
